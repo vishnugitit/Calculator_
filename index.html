@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .operators {
+        color: white;
+        background-color: rgb(225, 66, 66);
+      }
+      #display:hover {
+        border: 2px solid red;
+      }
+      button:hover {
+        border: 2px solid white;
+      }
+      button {
+        width: 4.5vw;
+        height: 5vh;
+
+        margin-top: 0.7%;
+        margin-left: 0.3%;
+        font-size: 3vh;
+        background-color: rgb(66, 56, 56);
+        color: white;
+      }
+      #display {
+        height: 15vh;
+        width: 20vw;
+        font-size: 6vh;
+       
+        color: black;
+        border: 2px solid black;
+      }
+      .c,
+      .res {
+        width: 9.5vw;
+        color: white;
+        background-color: rgb(67, 169, 67);
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" id="display" />
+
+    <div class="Layout">
+      <div>
+        <button onclick="clearScreen()" class="c">c</button>
+        <button onclick="calculate()" class="res">=</button>
+      </div>
+      <div>
+        <button onclick="addValue('1')">1</button>
+        <button onclick="addValue('2')">2</button>
+        <button onclick="addValue('3')">3</button>
+        <button onclick="addValue('+')" class="operators">+</button>
+      </div>
+      <div>
+        <button onclick="addValue('4')">4</button>
+        <button onclick="addValue('5')">5</button>
+        <button onclick="addValue('6')">6</button>
+        <button onclick="addValue('-')" class="operators">-</button>
+      </div>
+      <div>
+        <button onclick="addValue('7')">7</button>
+        <button onclick="addValue('8')">8</button>
+        <button onclick="addValue('9')">9</button>
+        <button onclick="addValue('*')" class="operators">*</button>
+      </div>
+
+      <div>
+        <button onclick="addValue('.')" class="operators">.</button>
+        <button onclick="addValue('0')">0</button>
+        <button onclick="addValue('%')" class="operators">%</button>
+        <button onclick="addValue('/')" class="operators">/</button>
+      </div>
+    </div>
+
+    <script>
+
+      screen = document.getElementById("display");
+      dig = document.getElementById("digits");
+
+    //   Adding Numbers on Screen 
+      function addValue(x) {
+        screen.value += x;
+      }
+
+    //   Calculation
+      function calculate() {
+        cal = eval(screen.value);
+        screen.value = cal;
+        // dig.innerHTML = cal;
+      }
+
+    //   Clear Screen
+      function clearScreen() {
+        let clear = document.getElementById("display");
+        clear.value = "";
+      }
+    </script>
+  </body>
+</html>
