@@ -4,42 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .operators {
-        color: white;
-        background-color: rgb(225, 66, 66);
-      }
-      #display:hover {
-        border: 2px solid red;
-      }
-      button:hover {
-        border: 2px solid white;
-      }
-      button {
-        width: 4.5vw;
-        height: 5vh;
-
-        margin-top: 0.7%;
-        margin-left: 0.3%;
-        font-size: 3vh;
-        background-color: rgb(66, 56, 56);
-        color: white;
-      }
-      #display {
-        height: 15vh;
-        width: 20vw;
-        font-size: 6vh;
-       
-        color: black;
-        border: 2px solid black;
-      }
-      .c,
-      .res {
-        width: 9.5vw;
-        color: white;
-        background-color: rgb(67, 169, 67);
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <input type="text" id="display" />
@@ -77,23 +42,22 @@
     </div>
 
     <script>
-
       screen = document.getElementById("display");
       dig = document.getElementById("digits");
 
-    //   Adding Numbers on Screen 
+      //   Adding Numbers on Screen
       function addValue(x) {
         screen.value += x;
       }
 
-    //   Calculation
+      //   Calculation
       function calculate() {
         cal = eval(screen.value);
         screen.value = cal;
         // dig.innerHTML = cal;
       }
 
-    //   Clear Screen
+      //   Clear Screen
       function clearScreen() {
         let clear = document.getElementById("display");
         clear.value = "";
