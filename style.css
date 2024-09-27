@@ -12,32 +12,23 @@ button {
   width: 70px;
   height: 50px;
   margin-top: 5px;
-  margin-left: 2px;
+  margin-left: 8px;
   font-size: 20px;
-  /* width: 4.5vw;
-  height: 5vh;
-  margin-top: 0.7%;
-  margin-left: 0.3%;
-  font-size: 3vh; */
   background-color: rgb(66, 56, 56);
   color: white;
 }
 #display {
   height: 150px;
-  width: 300px;
+  width: 315px;
   font-size: 45px;
-  /* height: 15vh;
-  width: 20vw;
-  font-size: 6vh; */
+  margin: 10px;
   color: black;
   border: 2px solid black;
 }
 .c,
 .res {
-  width: 146px;
-  /* width: 9.5vw; */
+  width: 152px;
+
   color: white;
   background-color: rgb(67, 169, 67);
 }
-
-
