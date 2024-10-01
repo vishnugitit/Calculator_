@@ -1,6 +1,7 @@
 .operators {
   color: white;
-  background-color: rgb(225, 66, 66);
+  background-image: linear-gradient(rgb(170, 167, 193), rgb(88, 108, 168));
+  color: rgb(8, 8, 8);
 }
 #display:hover {
   border: 2px solid red;
@@ -9,26 +10,30 @@ button:hover {
   border: 2px solid white;
 }
 button {
-  width: 70px;
+  width: 71px;
   height: 50px;
-  margin-top: 5px;
+  margin-top: 8px;
   margin-left: 8px;
   font-size: 20px;
-  background-color: rgb(66, 56, 56);
-  color: white;
+  background-image: linear-gradient(rgb(72, 183, 83), rgb(174, 185, 175));
+
+  border-radius: 10px;
+  color: black;
 }
+
 #display {
-  height: 150px;
-  width: 315px;
+  height: 120px;
+  width: 320px;
   font-size: 45px;
   margin: 10px;
-  color: black;
+  color: rgb(8, 7, 7);
   border: 2px solid black;
+  background-image: linear-gradient(rgb(178, 170, 209), rgb(164, 156, 184));
+  margin-top: 20px;
 }
 .c,
 .res {
-  width: 152px;
-
+  width: 155px;
   color: white;
   background-color: rgb(67, 169, 67);
 }

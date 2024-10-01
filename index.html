@@ -6,48 +6,70 @@
     <title>Calculator</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
+
   <style>
     * {
       padding: 0;
       margin: 0;
       box-sizing: border-box;
       font-family: arial;
-      font-weight: 100;
+      font-weight: bold;
     }
-  
+    .Outlook {
+      border: 2px solid black;
+      margin: 30px;
+      width: 343px;
+      height: 465px;
+      background-image: linear-gradient(rgb(192, 132, 194), rgb(181, 165, 182));
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+    }
+    input {
+      text-align: right;
+      border-radius: 10px;
+    }
+    .res {
+      color: black;
+    }
   </style>
   <body>
-    <input type="text" id="display" />
+    <div class="Outlook">
+      <input type="text" id="display" placeholder="0" />
 
-    <div class="Layout">
-      <div>
-        <button onclick="clearScreen()" class="c">c</button>
-        <button onclick="calculate()" class="res">=</button>
-      </div>
-      <div>
-        <button onclick="addValue('1')">1</button>
-        <button onclick="addValue('2')">2</button>
-        <button onclick="addValue('3')">3</button>
-        <button onclick="addValue('+')" class="operators">+</button>
-      </div>
-      <div>
-        <button onclick="addValue('4')">4</button>
-        <button onclick="addValue('5')">5</button>
-        <button onclick="addValue('6')">6</button>
-        <button onclick="addValue('-')" class="operators">-</button>
-      </div>
-      <div>
-        <button onclick="addValue('7')">7</button>
-        <button onclick="addValue('8')">8</button>
-        <button onclick="addValue('9')">9</button>
-        <button onclick="addValue('*')" class="operators">*</button>
-      </div>
+      <div class="Layout">
+        <div>
+          <button onclick="clearScreen()" class="AC">AC</button>
+          <button onclick="Clear()">C</button>
+          <button onclick="addValue('%')" class="operators">%</button>
+          <button onclick="addValue('/')" class="operators">/</button>
+        </div>
+        <div>
+          <button onclick="addValue('7')">7</button>
+          <button onclick="addValue('8')">8</button>
+          <button onclick="addValue('9')">9</button>
+          <button onclick="addValue('*')" class="operators">x</button>
+        </div>
+        <div>
+          <button onclick="addValue('4')">4</button>
+          <button onclick="addValue('5')">5</button>
+          <button onclick="addValue('6')">6</button>
+          <button onclick="addValue('-')" class="operators">-</button>
+        </div>
+        <div>
+          <button onclick="addValue('1')">1</button>
+          <button onclick="addValue('2')">2</button>
+          <button onclick="addValue('3')">3</button>
+          <button onclick="addValue('+')" class="operators">+</button>
+        </div>
 
-      <div>
-        <button onclick="addValue('.')" class="operators">.</button>
-        <button onclick="addValue('0')">0</button>
-        <button onclick="addValue('%')" class="operators">%</button>
-        <button onclick="addValue('/')" class="operators">/</button>
+        <div>
+          <button onclick="addValue('0')" style="width: 150px">0</button>
+          <button onclick="addValue('.')" class="operators">.</button>
+          <button onclick="calculate()" class="res" style="width: 75px">
+            =
+          </button>
+        </div>
       </div>
     </div>
 
@@ -71,6 +93,10 @@
       function clearScreen() {
         let clear = document.getElementById("display");
         clear.value = "";
+      }
+      function Clear() {
+        let clr = document.getElementById("display");
+        clr.value = clr.value.slice(0, -1);
       }
     </script>
   </body>
